@@ -9,8 +9,7 @@ export class ProductManager {
     getProducts = () =>{
         if (existsSync(this.path)) {
             const data = readFileSync(this.path, 'utf-8');
-            const productos = JSON.parse(data);
-            return productos;
+            return JSON.parse(data);
         }
         return [];
     }
